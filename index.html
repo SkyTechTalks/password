@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <input id="pass" type="password" placeholder="password">
+        <span id="fakepass">Password</span>
+        <label for="toggle" id="reveal">&#128065;</label>
+        <input type="checkbox" id="toggle" style="display:none;">
+    </div>
+    <script>
+        const toggle = document.getElementById('toggle');
+        const pass = document.getElementById('pass');
+        toggle.addEventListener('change', function() {
+            pass.type = this.checked ? 'text' : 'password';
+        });
+    </script>
+</body>
+</html>
